@@ -40,14 +40,30 @@
 	</dependencies>
 
 	<build>
-	  <plugins>
-	    <plugin>
-	      <artifactId>maven-war-plugin</artifactId>
-	      <configuration>
-	        <!--如果想在没有web.xml文件的情况下构建WAR，请设置为false。-->
-	        <failOnMissingWebXml>false</failOnMissingWebXml>
-	      </configuration>
-	    </plugin>
-	  </plugins>
+
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<archive>
+						<manifest>
+							<mainClass>com.ly.controller.AppSimpleTomcat</mainClass>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
