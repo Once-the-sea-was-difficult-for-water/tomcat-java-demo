@@ -18,3 +18,5 @@ spring:
     suffix: .ftl
     template-loader-path:
       - classpath:/templates/
+  jmx:
+    enabled: false

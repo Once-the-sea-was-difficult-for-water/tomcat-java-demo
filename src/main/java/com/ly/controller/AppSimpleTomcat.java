@@ -1,4 +1,4 @@
-package com.ly;
+package com.ly.controller;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
