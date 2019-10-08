@@ -13,16 +13,16 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * IndexController
- * @author lizibin
  *
+ * @author lizibin
  */
 @Controller
 @Slf4j
 public class IndexController {
 
-	@RequestMapping("/")
-	public String index(HttpServletRequest request, HttpServletResponse response,ModelMap model){
-		log.info("----------------请求访问index页面--------------->");
-		return "index";
-	}
+    @RequestMapping("/")
+    public String index(HttpServletRequest request, HttpServletResponse response, ModelMap model) {
+        log.info("----------------请求访问index页面--------------->");
+        return "index";
+    }
 }
